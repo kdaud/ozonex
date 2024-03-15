@@ -1,0 +1,271 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.faimer.module</groupId>
+  <artifactId>faimer-distro</artifactId>
+  <name>FAIMER Reference Application Distribution</name>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <developers>
+    <developer>
+      <name>Mekom Solutions</name>
+      <url>https://www.mekomsolutions.com</url>
+    </developer>
+  </developers>
+
+  <properties>
+    <!-- OpenMRS modules -->
+    <samplepatients.version>1.2.0-SNAPSHOT</samplepatients.version>
+    <referenceapplicationDistro.version>3.0.0-SNAPSHOT</referenceapplicationDistro.version>
+    <datafilter.version>2.2.0</datafilter.version>
+  </properties>
+
+  <dependencies>
+    <!-- Ref App Distro -->
+    <dependency>
+      <groupId>org.openmrs.distro</groupId>
+      <artifactId>referenceapplication-distro</artifactId>
+      <type>zip</type>
+      <version>${referenceapplicationDistro.version}</version>
+    </dependency>
+
+    <!--  OpenMRS modules -->
+    <dependency>
+      <groupId>org.faimer.module</groupId>
+      <artifactId>samplepatients-omod</artifactId>
+      <version>${samplepatients.version}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>datafilter-omod</artifactId>
+      <version>${datafilter.version}</version>
+      <type>jar</type>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+
+          <execution>
+            <id>Unpack OpenMRS Ref App in a temporary location</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <outputDirectory>${project.build.directory}/referenceapplication-distro</outputDirectory>
+              <includeArtifactIds>referenceapplication-distro</includeArtifactIds>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>Copy OpenMRS modules</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules/</outputDirectory>
+              <!-- Copying JARs and OMODs only. -->
+              <includeTypes>jar, omod</includeTypes>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>Copy local configs/ resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/distro/configurations</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>Copy Ref App modules</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <copy todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules">
+                  <fileset dir="${project.build.directory}/referenceapplication-distro/sdk-distro/web/modules" />
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>Rename jars to omods</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <move todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules">
+                  <fileset dir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules" />
+                  <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
+                </move>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>Copy Ref App configurations</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <copy todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config">
+                  <fileset dir="${project.build.directory}/referenceapplication-distro/openmrs_config" />
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- packaging the distro as a installable/deployable file -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>Package FAIMER Distro Artifact</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <descriptors>
+                <descriptor>assembly.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>mks-nexus-public</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
+    </repository>
+    <repository>
+      <id>openmrs-repo</id>
+      <name>OpenMRS Nexus Repository</name>
+      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+    </repository>
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>mks-nexus-private-releases</id>
+      <name>Mekom Solutions Nexus repo</name>
+      <url>https://nexus.mekomsolutions.net/repository/maven-private-releases/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>mks-nexus-private-snapshots</id>
+      <name>Mekom Solutions Nexus repo for snapshots</name>
+      <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>openmrs-repo</id>
+      <name>OpenMRS Nexus Repository</name>
+      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>openmrs-snapshots</id>
+      <name>OpenMRS Public Repository</name>
+      <url>https://mavenrepo.openmrs.org/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
+    <pluginRepository>
+      <id>mks-nexus-public</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>mks-nexus-snapshots</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-snapshots/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <repository>
+      <name>Mekom Solutions Nexus private repo for releases</name>
+      <id>mks-nexus-private-releases</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-private-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <name>Mekom Solutions Nexus private repo for snapshots</name>
+      <id>mks-nexus-private-snapshots</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>
