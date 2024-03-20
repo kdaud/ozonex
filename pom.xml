@@ -146,7 +146,9 @@
             <configuration>
               <target>
                 <copy todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config">
-                  <fileset dir="${project.build.directory}/referenceapplication-distro/openmrs_config" />
+                  <fileset dir="${project.build.directory}/referenceapplication-distro/openmrs_config">
+                    <exclude name="**/locations*.csv"/>
+                  </fileset>
                 </copy>
               </target>
             </configuration>
