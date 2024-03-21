@@ -1,3 +1,6 @@
-Uuid,Privilege name,Description,_order:1000
+Uuid,Privilege name,Description,_order:1500
+c70eb395-f857-4693-b6c8-18ff8d9759da,Get Medication Dispense,Able to get Medication Dispenses,
+e6db2e08-3826-4220-9b85-8a6b2d2a96ce,Edit Medication Dispense,Able to edit Medication Dispenses,
+edd99c3a-6005-4fa1-8a81-1ace0afd6e04,Delete Medication Dispense,Able to delete Medication Dispenses,
 30d2be09-68ab-49e1-a266-c3970f09f247,Faimer: Has Associated Patients,Privilege to control whether a user will have patients created for them,
 60a004e1-a945-44a3-a953-80d8ebdb9bbd,Faimer: See All Patients,Privilege to allow a user to see all patients,
