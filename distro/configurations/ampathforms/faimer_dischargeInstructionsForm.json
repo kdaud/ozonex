@@ -1,0 +1,86 @@
+{
+  "name": "Discharge Instructions",
+  "description": "Discharge Instructions form",
+  "version": "1",
+  "published": true,
+  "retired": false,
+  "encounter": "Discharge Instructions",
+  "pages": [
+    {
+      "label": "Discharge Instructions",
+      "sections": [
+        {
+          "label": "Discharge Instructions",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Treatment Information and Instructions",
+              "type": "obs",
+              "required": false,
+              "id": "dischargeInstructionsTIIs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "d7984cf5-30f6-4cf4-af68-5a03108bca4e",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Reasons to Contact the Doctor",
+              "type": "obs",
+              "required": false,
+              "id": "dischargeInstructionsRCDs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "2e7a2a8a-8c92-44df-89a5-48ff8cc207a6",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Discharge Medications",
+              "type": "obs",
+              "required": false,
+              "id": "dischargeInstructionsDischargeMedications",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "39bb78c4-ec9a-44cb-84d7-27f1e2fe831b",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Follow-up Appointment",
+              "type": "obs",
+              "required": false,
+              "id": "dischargeInstructionsFollowUpAppointments",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "afae383e-96d1-4d0e-81a3-4d9c4b5b1f6b",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Additional Instruction",
+              "type": "obs",
+              "required": false,
+              "id": "dischargeInstructionsAdditionalInstructions",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "0c2f4ba6-d0f6-4e15-8902-5d05f858eeb7",
+                "conceptMappings": [],
+                "answers": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "",
+  "referencedForms": [],
+  "uuid": ""
+}
+

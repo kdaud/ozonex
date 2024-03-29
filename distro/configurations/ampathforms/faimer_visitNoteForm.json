@@ -1,0 +1,38 @@
+{
+  "name": "Visit Note",
+  "description": "Visit Note form",
+  "version": "1",
+  "published": true,
+  "retired": false,
+  "encounter": "Visit Note",
+  "pages": [
+    {
+      "label": "Visit Note",
+      "sections": [
+        {
+          "label": "Visit Note",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Visit Note",
+              "type": "obs",
+              "required": false,
+              "id": "visitNoteProcedure",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "",
+  "referencedForms": [],
+  "uuid": ""
+}
+

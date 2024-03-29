@@ -1,0 +1,4 @@
+Uuid,Void/Retire,Name,Description,View privilege,Edit privilege,_order:1000
+7bf98232-5129-4a9c-8927-9f1245d34f9a,,Procedure Note,Encounter for Procedure Note form,,,,
+c3ad74fb-52d5-467d-b0b4-12f874be6b52,,Discharge Summary,Encounter for Discharge Summary form,,,,
+f0e2d12b-4b3a-4f9f-bc29-6c1e2c94f4d7,,Discharge Instructions,Encounter for Discharge Instructions form,,,,

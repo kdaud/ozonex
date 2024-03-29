@@ -1,0 +1,1328 @@
+{
+  "name":"Discharge Summary",
+  "description":"Discharge Summary form",
+  "version":"1",
+  "published":true,
+  "retired":false,
+  "encounter":"Discharge Summary",
+  "pages":[
+    {
+      "label":"Discharge Summary",
+      "sections":[
+        {
+          "label":"Discharge Summary",
+          "isExpanded":"true",
+          "questions":[
+            {
+              "label":"Admission Date",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryAdmissionDate",
+              "questionOptions":{
+                "rendering":"date",
+                "concept":"6c4d8a57-df9f-4c08-b9e5-54062f5e3e71",
+                "weeksList":""
+              }
+            },
+            {
+              "label":"Discharge Date",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryDischargeDate",
+              "questionOptions":{
+                "rendering":"date",
+                "concept":"8e9f63d6-43db-4512-a5e1-2f325da53a85",
+                "weeksList":""
+              }
+            },
+            {
+              "label":"Diagnosis",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryDiagnosis",
+              "questionOptions":{
+                "rendering":"select",
+                "concept":"1a5baf37-2e64-48b0-85f0-1016c37e37ec",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  {
+                    "concept":"137504AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Infection by Ascaris Lumbricoides",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"137329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Infection due to Entamoeba Histolytica",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"133792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Mucus in Stool",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"127133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Schistosoma Mansonii Infection",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"123505AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Uric Acid Crystalluria",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"123501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Urinary Cast, Hyaline",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"120759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cestode Infection",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"148882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Ancylostomiasis due to Ancylostoma Duodenale",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"116031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Malignant neoplasm",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"116030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Neoplasm/cancer",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Constipation",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Kaposi sarcoma oral",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Helicobacter Pylori Gastrointestinal Tract Infection",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"138609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Hip Pain",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"130601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Peptic Ulcer of Stomach",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"130595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Peptic Ulcer with Perforation",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"123919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Ulcer",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"123569AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Upper Gastrointestinal Hemorrhage",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Diabetes mellitus",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"117905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Gastric ulcer",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"117903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Bleeding Stomach Ulcer",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Hypertension",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Acute Gastric Ulcer without Hemorrhage or Perforation",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Acute Peptic Ulcer with Haemorrhage but without Obstruction",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Acute Peptic Ulcer with Perforation",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"145625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cholelithiasis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"141210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Enteropathogenic Escherichia Coli Gastrointestinal Tract Infection",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Typhoid fever",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"166845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Multisystem inflammatory syndrome associated with severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection in adult",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Upper respiratory tract infection due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Acute respiratory disease due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Disease due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165612AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Suspected severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165608AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Pneumonia due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"130811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Paratyphoid Fever",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"1293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Gastroesophageal reflux disease",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"127198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Salmonella Septicaemia",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"126558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Shigellosis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"122604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cholera due to Vibrio cholerae",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"114262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Peptic ulcer",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"1449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Gestational diabetes",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"142486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Diabetes insipidus",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"141730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Drug-Induced Diabetes Mellitus",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"140987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Essential hypertension",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"138176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Hyperthyroidism",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"128125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Pulmonary Hypertension",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"122101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Acute Cholecystitis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"117321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Hypothyroidism",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"142917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Death of unknown cause",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"507AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Kaposi's sarcoma of skin",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"133481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Natural Death",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"133475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Natural Death with Unknown Cause",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"125119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Syphilitic Cirrhosis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"AIDS with Kaposi's sarcoma",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"116128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Malaria",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculosis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"146221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Carcinoma of Prostate",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"165609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Infection due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"160160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"HIV resulting in other conditions",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"129119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Primary Genital Syphilis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"133328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Neoplasm of Lung",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"134561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Measles",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Asthma",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"116023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Malignant neoplasm of cervix uteri",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"114100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Pneumonia",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"143264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cough",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Diarrhea",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"141760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Drug allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"140039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Flushing",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Gastrointestinal Food Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Gastrointestinal Irritation",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Headache",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"136455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Itching",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"159347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Musculoskeletal pain",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"159098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Toxic liver disease",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121689AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Allergy to Anti-Infective Agent",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Altered Mental Status",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Anaemia",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"calcium channel blocker allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to sufentanil",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to sevoflurane",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to remifentanil",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to meropenem",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to imipenem",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to egg protein",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to chloroprocaine",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"120148AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cardiac Dysrhythmia",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"119779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"History of Allergy to Milk Products",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"154386AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"4-quinolones allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"118773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Dystonia",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"116367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Latex",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Insects",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Spiders",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Seafood",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Allergy to Sulfonamides",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"148888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Anaphylaxis",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"148787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Angioedema",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Wheal",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to wheat",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"156681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"house dust mite allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"156171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"erythromycin allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"156587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"heparin allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"153435AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"sulfite allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to dairy product",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"151297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Analgesic Agent Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"154389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"5-hydroxytryptamine-3 receptor antagonist allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"153358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Tomatoes",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"151292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Allergy to Unspecified Medicinal Agent",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to ertapenem",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"142943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Dander (Animal) Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to penicillin",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Insect Bites",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"143476AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Contrast Media Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Peanuts",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy, Unspecified",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Food Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"146113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Cats",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"155036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"allergy to almonds",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"148826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Allergy to Anesthetic Agent",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"157885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"naproxen allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"139207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergic to Other Foods",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"149074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Eggs",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"136203AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Laboratory Animal Dander Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"121682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy-Sensitivity to Fungi Syndrome",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110178AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Allergy to Dog",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"History of Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"114159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Photoallergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111178AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Hymenoptera Allergy",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Personal History of Allergy to Shellfish",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"138405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Human immunodeficiency virus (HIV) disease",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"141748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Drug Interaction (Properly Prescribed and Administered)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"114108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Pleural effusion",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"0016512d-4388-44f0-a4b6-f6ad9e18fdcd",
+                    "label":"Mild persistent asthma (J45.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"006ab3b2-a0ea-45bf-b495-83e06f26f87a",
+                    "label":"Acute rheumatic fever (I00)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"02db87f6-40d0-4b2a-8c19-927db2c43168",
+                    "label":"Idiopathic cardiomyopathy (I42.8)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"0670f6b9-5456-4bd3-86b1-846abc4fe2ba",
+                    "label":"Heart Failure (I50.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"06cc08fb-414a-46e6-8c20-136535609812",
+                    "label":"Rheumatic Fever Without Heart Involvement (I00)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"08e9c0e1-d72f-425d-81ea-dbe88eb90772",
+                    "label":"Birth Asphyxia (P21.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"105903f4-7b6d-496a-b613-37ab9d0f5450",
+                    "label":"Type 1 diabetes (E10)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Malignant tumor of lymphatic and hematopoietic tissue (C96.7)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Urticaria, Solar (L56.3)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110516AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Herpes simplex esophagitis (B00.8)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Fracture of great toe (S92.4)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Stromal tumor of digestive system (D48.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"110807AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Fracture of Base of Skull (S02.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Cerebrovascular Accident (I64)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111459AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Vitiligo (L80)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Extreme prematurity, < 28 weeks gestation (P07.2)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Vaginal Enterocele (N81.5)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Uterine Inversion (N85.5)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Urinary calculus (N20.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Polyarthropathy or Polyarthritis (M15.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Umbilical Cord Complication During Labor and Delivery (O69.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Twin Pregnancy (O30.0)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"11180d8f-1628-4ea7-9fcc-ea80726d3829",
+                    "label":"Dilated cardiomyopathy (I42.0)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculosis of skin and subcutaneous tissue (A18.4)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"111967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculous Meningitis (A17.0)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculosis of the peritonium (A18.3)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculosis Of Central Nervous System (A17.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculosis of bones and joints (A18.0)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Tuberculoid Leprosy (Type T) (A30.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Triplet Pregnancy (O30.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Traumatic Amputation of Finger(s) (S68.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Amputation of arm (T11.6)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Transitory tachypnea of newborn (P22.1)",
+                    "conceptMappings":[
+                      
+                    ]
+                  },
+                  {
+                    "concept":"112276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label":"Transient Cerebral Ischemia (G45.9)",
+                    "conceptMappings":[
+                      
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "label":"Procedure",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryProcedure",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"27fe6714-0bc6-4435-adb0-818538abe42c",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            },
+            {
+              "label":"Consultation",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryConsultation",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"cb14d23a-d9d2-40fb-9d1d-eb4d3b9d18d3",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            },
+            {
+              "label":"Hospital Course",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryHospitalCourse",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"de6d3e20-1c57-4896-bc5b-5db42d9db8c2",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            },
+            {
+              "label":"Discharge To",
+              "type":"obs",
+              "id":"dischargeSummaryDischargeTo",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"fc23f7f6-0cc2-4fb2-af5d-7362b16c9be9",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            },
+            {
+              "label":"Discharge Medications",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryDischargeMedication",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"39bb78c4-ec9a-44cb-84d7-27f1e2fe831b",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            },
+            {
+              "label":"Discharge Instruction",
+              "type":"obs",
+              "required":false,
+              "id":"dischargeSummaryDischargeInstruction",
+              "questionOptions":{
+                "rendering":"textarea",
+                "concept":"a25c02c2-3e94-4984-bc0d-39c494de9518",
+                "conceptMappings":[
+                  
+                ],
+                "answers":[
+                  
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor":"EncounterFormProcessor",
+  "encounterType":"",
+  "referencedForms":[
+    
+  ],
+  "uuid":""
+}

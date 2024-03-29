@@ -1,0 +1,160 @@
+{
+  "name": "Procedure Note",
+  "description": "Procedure Note form",
+  "version": "1",
+  "published": true,
+  "retired": false,
+  "encounter": "Procedure Note",
+  "pages": [
+    {
+      "label": "Procedure Note",
+      "sections": [
+        {
+          "label": "Procedure Note",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Procedure",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteProcedure",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "27fe6714-0bc6-4435-adb0-818538abe42c",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Indication",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteIndication",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "eeb9e10f-fc30-496e-8a5e-7e6142fe0f78",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Date",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "0934658e-fee3-44e3-a8f2-292dc3587f54",
+                "weeksList": ""
+              }
+            },
+            {
+              "label": "Physician",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNotePhysician",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "afae383e-96d1-4d0e-81a3-4d9c4b5b1f6b",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Consent",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteConsent",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "bb8b4697-5797-464b-afbb-6e7e8c279dc3",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Anesthesia Type",
+              "type": "obs",
+              "id": "procedureNoteAnesthesiaType",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "3017f680-5c3c-4f7b-94e1-6afda9e07eaf",
+                "answers": [
+                  {
+                    "concept": "3ca389b4-6b9d-487c-bdd9-73d2cfeeab0c",
+                    "label": "General",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "5392d074-eed3-4f88-a8e9-5bae333e7589",
+                    "label": "Monitored Anesthesia Care",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "84ba7929-3714-4023-843a-2b1814563207",
+                    "label": "Knee Block",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "7dd25939-b4e5-4657-8c69-ac4993f183b5",
+                    "label": "Axillary Block",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "0f087406-b092-419c-a9ae-bd32c9e29a43",
+                    "label": "Interscalene Block",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "20fafddb-bfd4-421e-acfb-639454741e94",
+                    "label": "Intravenous Block",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "3dbb2d82-ee96-43a5-a905-0401c2d8b1a9",
+                    "label": "Local Anesthesia and Sedation",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "ea6ac7de-d7cf-4105-aadb-b1e489536a7e",
+                    "label": "Local Anesthesia",
+                    "conceptMappings": []
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Procedure Summary",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteProcedureSummary",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "9d4a693f-5b72-4e8a-8307-f7dc13a35245",
+                "conceptMappings": [],
+                "answers": []
+              }
+            },
+            {
+              "label": "Complecations",
+              "type": "obs",
+              "required": false,
+              "id": "procedureNoteComplecations",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "64fe56e6-5b52-4cdb-adc2-b6d50bfdee63",
+                "conceptMappings": [],
+                "answers": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "",
+  "referencedForms": [],
+  "uuid": ""
+}
+
