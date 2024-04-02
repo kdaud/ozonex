@@ -15,7 +15,7 @@
   </developers>
 
   <properties>
-    <referenceapplicationDistro.version>3.0.0-SNAPSHOT</referenceapplicationDistro.version>
+    <referenceapplicationDistro.version>3.0.0-beta.18</referenceapplicationDistro.version>
     <samplepatients.version>1.3.0-SNAPSHOT</samplepatients.version>
     <datafilter.version>2.2.0</datafilter.version>
   </properties>
