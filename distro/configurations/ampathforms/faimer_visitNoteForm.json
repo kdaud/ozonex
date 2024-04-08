@@ -17,7 +17,7 @@
               "label": "Visit Note",
               "type": "obs",
               "required": false,
-              "id": "visitNoteProcedure",
+              "id": "visitNote",
               "questionOptions": {
                 "rendering": "textarea",
                 "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
