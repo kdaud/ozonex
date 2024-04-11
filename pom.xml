@@ -149,6 +149,7 @@
                   <fileset dir="${project.build.directory}/referenceapplication-distro/openmrs_config">
                     <exclude name="**/locations*.csv"/>
                     <exclude name="**/globalproperties*demo*.xml"/>
+                    <exclude name="**/ampath_poc_adult_return_visit_form*.json"/>
                   </fileset>
                 </copy>
               </target>
