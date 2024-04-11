@@ -62,7 +62,7 @@
               }
             },
             {
-              "label": "Additional Instruction",
+              "label": "Additional Instructions",
               "type": "obs",
               "required": false,
               "id": "dischargeInstructionsAdditionalInstructions",

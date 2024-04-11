@@ -1220,10 +1220,10 @@
               }
             },
             {
-              "label":"Procedure",
+              "label":"Procedures",
               "type":"obs",
               "required":false,
-              "id":"dischargeSummaryProcedure",
+              "id":"dischargeSummaryProcedures",
               "questionOptions":{
                 "rendering":"textarea",
                 "concept":"27fe6714-0bc6-4435-adb0-818538abe42c",
@@ -1236,10 +1236,10 @@
               }
             },
             {
-              "label":"Consultation",
+              "label":"Consultations",
               "type":"obs",
               "required":false,
-              "id":"dischargeSummaryConsultation",
+              "id":"dischargeSummaryConsultations",
               "questionOptions":{
                 "rendering":"textarea",
                 "concept":"cb14d23a-d9d2-40fb-9d1d-eb4d3b9d18d3",
@@ -1299,10 +1299,10 @@
               }
             },
             {
-              "label":"Discharge Instruction",
+              "label":"Discharge Instructions",
               "type":"obs",
               "required":false,
-              "id":"dischargeSummaryDischargeInstruction",
+              "id":"dischargeSummaryDischargeInstructions",
               "questionOptions":{
                 "rendering":"textarea",
                 "concept":"a25c02c2-3e94-4984-bc0d-39c494de9518",
