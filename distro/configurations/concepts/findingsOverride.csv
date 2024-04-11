@@ -1,3 +1,4 @@
 Uuid,Void/Retire,Same as mappings,Fully specified name:en,Fully specified name:fr,Short name:en,Short name:fr,Description:en,Description:fr,Data class,Data type,Absolute low,Critical low,Normal low,Normal high,Critical high,Absolute high,Units,Allow decimals,Display precision,_version:1,_order:1500
 5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5090;PIH:5090;AMPATH:5090,Height (in),Taille (in),HT,,Patient's height in inches.,,Finding,Numeric,10,,,,,272,in,Yes,,,
 5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5089;PIH:5089;AMPATH:5089,Weight (lbs),Poids (lbs),WT,,Patient's weight in pounds.,,Finding,Numeric,0,,,,,250,lbs,Yes,,,
+5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5088;PIH:5088;AMPATH:5088,Temperature (c),Température (c),Temp (c),,Patient's temperature in degrees centigrade.,,Finding,Numeric,25,,,,38,43,DEG C,Yes,,,
