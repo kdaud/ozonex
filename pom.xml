@@ -86,7 +86,7 @@
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
           <execution>
-            <id>Copy local configs/ resources</id>
+            <id>Copy local openmrs configs/ resources</id>
             <phase>prepare-package</phase>
             <goals>
               <goal>copy-resources</goal>
@@ -97,11 +97,30 @@
               <overwrite>true</overwrite>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/distro/configurations</directory>
+                  <directory>${project.basedir}/distro/openmrs_config</directory>
                 </resource>
               </resources>
             </configuration>
           </execution>
+
+          <execution>
+            <id>Copy local frontend configs/ resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/distro/openmrs_frontend</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
         </executions>
       </plugin>
 
