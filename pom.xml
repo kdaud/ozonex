@@ -169,6 +169,7 @@
                     <exclude name="**/locations*.csv"/>
                     <exclude name="**/globalproperties*demo*.xml"/>
                     <exclude name="**/ampath_poc_adult_return_visit_form*.json"/>
+                    <exclude name="**/lab_order_entry_form*.json"/>
                   </fileset>
                 </copy>
               </target>
