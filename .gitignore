@@ -21,3 +21,6 @@ buildNumber.properties
 .idea/
 *.iws
 *.iml
+
+node
+.cache
