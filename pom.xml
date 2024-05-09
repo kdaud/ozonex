@@ -224,7 +224,7 @@
             </goals>
             <phase>generate-resources</phase>
             <configuration>
-              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1717 assemble --mode config --config ${project.basedir}/distro/openmrs_frontend_assembly/spa-assemble-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend --hash-importmap --manifest</arguments>
+              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1741 assemble --mode config --config ${project.basedir}/distro/openmrs_frontend_assembly/spa-assemble-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend --hash-importmap --manifest</arguments>
             </configuration>
           </execution>
           <execution>
@@ -234,7 +234,7 @@
             </goals>
             <phase>generate-resources</phase>
             <configuration>
-              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1717 build --build-config ${project.basedir}/distro/openmrs_frontend_assembly/spa-build-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend</arguments>
+              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1741 build --build-config ${project.basedir}/distro/openmrs_frontend_assembly/spa-build-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend</arguments>
             </configuration>
           </execution>
         </executions>
