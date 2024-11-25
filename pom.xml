@@ -39,10 +39,15 @@
 
     <repositories>
         <repository>
-          <id>mks-nexus-private</id>
-          <url>https://nexus.mekomsolutions.net/repository/maven-private/</url>
+            <id>mks-nexus-public</id>
+            <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>mks-nexus-private</id>
+            <url>https://nexus.mekomsolutions.net/repository/maven-private/</url>
         </repository>
     </repositories>
+
     <build>
         <plugins>
             <plugin>
