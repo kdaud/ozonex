@@ -1,407 +1,120 @@
-<project>
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ozonehis</groupId>
+        <artifactId>maven-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-  <groupId>org.faimer.distro</groupId>
-  <artifactId>openmrs-distro-faimer</artifactId>
-  <name>An OpenMRS Reference Application Distribution for FAIMER</name>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <groupId>com.ozonehis</groupId>
+    <artifactId>ozone-faimer</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
 
-  <developers>
-    <developer>
-      <name>Mekom Solutions</name>
-      <url>https://www.mekomsolutions.com</url>
-    </developer>
-  </developers>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
 
-  <properties>
-    <referenceapplicationDistro.version>3.0.0-20240426.135009-3121</referenceapplicationDistro.version>
-    <openmrs.version>2.6.5</openmrs.version>
-    <samplepatients.version>1.3.0-SNAPSHOT</samplepatients.version>
-    <datafilter.version>2.2.0</datafilter.version>
-  </properties>
+        <samplepatients.version>1.3.0-SNAPSHOT</samplepatients.version>
+        <datafilter.version>2.2.0</datafilter.version>
+    </properties>
 
-  <dependencies>
-    <!-- Ref App Distro -->
-    <dependency>
-      <groupId>org.openmrs.distro</groupId>
-      <artifactId>referenceapplication-distro</artifactId>
-      <type>zip</type>
-      <version>${referenceapplicationDistro.version}</version>
-    </dependency>
+    <dependencies>
+        <!--  OpenMRS modules -->
+        <dependency>
+            <groupId>org.faimer.module</groupId>
+            <artifactId>samplepatients-omod</artifactId>
+            <version>${samplepatients.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>datafilter-omod</artifactId>
+            <version>${datafilter.version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 
-    <!-- OpenMRS Core -->
-    <dependency>
-      <groupId>org.openmrs.web</groupId>
-      <artifactId>openmrs-webapp</artifactId>
-      <version>${openmrs.version}</version>
-      <type>war</type>
-    </dependency>
-
-    <!--  OpenMRS modules -->
-    <dependency>
-      <groupId>org.faimer.module</groupId>
-      <artifactId>samplepatients-omod</artifactId>
-      <version>${samplepatients.version}</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>org.openmrs.module</groupId>
-      <artifactId>datafilter-omod</artifactId>
-      <version>${datafilter.version}</version>
-      <type>jar</type>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.6.1</version>
-        <executions>
-          <execution>
-            <id>Unpack OpenMRS Ref App in a temporary location</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <outputDirectory>${project.build.directory}/referenceapplication-distro</outputDirectory>
-              <includeArtifactIds>referenceapplication-distro</includeArtifactIds>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>Copy OpenMRS core</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/openmrs_core/</outputDirectory>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.openmrs.web</groupId>
-                  <artifactId>openmrs-webapp</artifactId>
-                  <version>${openmrs.version}</version>
-                  <type>war</type>
-                  <destFileName>openmrs.war</destFileName>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>Copy OpenMRS modules</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules/</outputDirectory>
-              <!-- Copying JARs and OMODs only. -->
-              <includeTypes>jar, omod</includeTypes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>Copy local openmrs configs/ resources</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>
-                ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config</outputDirectory>
-              <overwrite>true</overwrite>
-              <resources>
-                <resource>
-                  <directory>${project.basedir}/distro/openmrs_config</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>Copy local frontend configs/ resources</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>
-                ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend</outputDirectory>
-              <overwrite>true</overwrite>
-              <resources>
-                <resource>
-                  <directory>${project.basedir}/distro/openmrs_frontend</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-        </executions>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>Copy Ref App modules</id>
-            <phase>package</phase>
-            <configuration>
-              <target>
-                <copy todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules">
-                  <fileset dir="${project.build.directory}/referenceapplication-distro/sdk-distro/web/modules" />
-                </copy>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-
-          <execution>
-            <id>Rename jars to omods</id>
-            <phase>package</phase>
-            <configuration>
-              <target>
-                <move todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules">
-                  <fileset dir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_modules" />
-                  <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
-                </move>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-
-          <execution>
-            <id>Copy Ref App configurations</id>
-            <phase>package</phase>
-            <configuration>
-              <target>
-                <copy todir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config">
-                  <fileset dir="${project.build.directory}/referenceapplication-distro/openmrs_config">
-                    <exclude name="**/locations*.csv"/>
-                    <exclude name="**/globalproperties*demo*.xml"/>
-                    <exclude name="**/ampath_poc_adult_return_visit_form*.json"/>
-                    <exclude name="**/ampathformstranslations/*.json" />
-                    <exclude name="**/lab_order_entry_form*.json"/>
-                  </fileset>
-                </copy>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-
-          <!-- copy over merged/packaged OpenMRS config for validation at the integration-test phase -->
-          <execution>
-            <id>Copy OpenMRS config for validation</id>
-            <phase>pre-integration-test</phase>
-            <configuration>
-              <target>
-                <copy todir="${project.build.directory}/configuration">
-                  <fileset
-                    dir="${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config" />
-                </copy>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- build the custom frontend -->
-      <plugin>
-        <groupId>com.github.eirslett</groupId>
-        <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.15.0</version>
-        <executions>
-          <execution>
-            <!-- optional: you don't really need execution ids, but it looks nice in your build log. -->
-            <id>install node and npm</id>
-            <goals>
-              <goal>install-node-and-npm</goal>
-            </goals>
-            <!-- optional: default phase is "generate-resources" -->
-            <phase>generate-resources</phase>
-            <configuration>
-              <nodeVersion>v18.20.2</nodeVersion>
-            </configuration>
-          </execution>
-          <execution>
-            <id>run openmrs assemble</id>
-            <goals>
-              <goal>npx</goal>
-            </goals>
-            <phase>generate-resources</phase>
-            <configuration>
-              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1741 assemble --mode config --config ${project.basedir}/distro/openmrs_frontend_assembly/spa-assemble-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend --hash-importmap --manifest</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>run openmrs build</id>
-            <goals>
-              <goal>npx</goal>
-            </goals>
-            <phase>generate-resources</phase>
-            <configuration>
-              <arguments>--legacy-peer-deps openmrs@5.5.1-pre.1741 build --build-config ${project.basedir}/distro/openmrs_frontend_assembly/spa-build-config.json --target ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_frontend</arguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- packaging the distro as a deployable file -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>Package FAIMER Distro Artifact</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <appendAssemblyId>false</appendAssemblyId>
-              <descriptors>
-                <descriptor>assembly.xml</descriptor>
-              </descriptors>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-
-  <repositories>
-    <repository>
-      <id>mks-nexus-public</id>
-      <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
-    </repository>
-    <repository>
-      <id>openmrs-repo</id>
-      <name>OpenMRS Nexus Repository</name>
-      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
-    </repository>
-    <repository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>mks-nexus-private-releases</id>
-      <name>Mekom Solutions Nexus repo</name>
-      <url>https://nexus.mekomsolutions.net/repository/maven-private-releases/</url>
-    </repository>
-    <repository>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>mks-nexus-private-snapshots</id>
-      <name>Mekom Solutions Nexus repo for snapshots</name>
-      <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>openmrs-repo</id>
-      <name>OpenMRS Nexus Repository</name>
-      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>openmrs-snapshots</id>
-      <name>OpenMRS Public Repository</name>
-      <url>https://mavenrepo.openmrs.org/snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </pluginRepository>
-    <pluginRepository>
-      <id>mks-nexus-public</id>
-      <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>mks-nexus-snapshots</id>
-      <url>https://nexus.mekomsolutions.net/repository/maven-snapshots/</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-
-  <profiles>
-    <profile>
-      <id>validator</id>
-      <build>
+    <repositories>
+        <repository>
+          <id>mks-nexus-private</id>
+          <url>https://nexus.mekomsolutions.net/repository/maven-private/</url>
+        </repository>
+    </repositories>
+    <build>
         <plugins>
-
-          <!-- hooking the OpenMRS config validation to the integration-test phase -->
-          <plugin>
-            <groupId>org.openmrs.maven.plugins</groupId>
-            <artifactId>openmrs-packager-maven-plugin</artifactId>
-            <version>1.7.0</version>
-            <executions>
-              <execution>
-                <id>Validate OpenMRS configuration</id>
-                <phase>integration-test</phase>
-                <goals>
-                  <goal>validate-configurations</goal>
-                </goals>
-                <configuration>
-                  <sourceDir>${project.build.directory}/configuration</sourceDir>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <!-- Exclude files from Ozone -->
+                        <id>Exclude unneeded Ozone files</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/ozone</directory>
+                                    <excludes>
+                                        <exclude>distro/configs/**/ampathforms*/**</exclude>
+<!--                                        <exclude>distro/configs/**/concepts*/**</exclude>-->
+<!--                                        <exclude>distro/configs/**/drugs*/**</exclude>-->
+<!--                                        <exclude>distro/configs/**/encountertypes*/**</exclude>-->
+<!--                                        <exclude>distro/configs/**/globalproperties*/**</exclude>-->
+                                        <exclude>distro/configs/**/locations*/**</exclude>
+<!--                                        <exclude>distro/configs/**/privileges*/**</exclude>-->
+<!--                                        <exclude>distro/configs/**/roles*/**</exclude>-->
+                                    </excludes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-      </build>
-    </profile>
-  </profiles>
 
-  <distributionManagement>
-    <repository>
-      <name>Mekom Solutions Nexus private repo for releases</name>
-      <id>mks-nexus-private-releases</id>
-      <url>https://nexus.mekomsolutions.net/repository/maven-private-releases/</url>
-    </repository>
-    <snapshotRepository>
-      <name>Mekom Solutions Nexus private repo for snapshots</name>
-      <id>mks-nexus-private-snapshots</id>
-      <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+    </build>
 
+    <profiles>
+        <profile>
+            <id>validator</id>
+            <activation>
+                <jdk>1.8</jdk>
+                <property>
+                    <name>env.CI</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- hooking the OpenMRS config validation to the integration-test phase -->
+                    <plugin>
+                        <groupId>org.openmrs.maven.plugins</groupId>
+                        <artifactId>openmrs-packager-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>Validate OpenMRS configuration</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>validate-configurations</goal>
+                                </goals>
+                                <configuration>
+                                    <sourceDir>${project.build.directory}/${project.artifactId}-${project.version}/distro/configs/openmrs/initializer_config</sourceDir>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
