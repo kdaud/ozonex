@@ -1,0 +1,3 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Fully specified name:es,Short name:es,Description:en,Description:es,Data class,Data type,Synonym 1:en,Answers,Members,Allow decimals,Units,Normal low,Normal high,Absolute low,Absolute high,_version:1,_order:9000
+161500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,,C-reactive protein,CRP,,,,,Test,Numeric,CRP level,,,Yes,mg/L,,,0.0,,,
+161500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,TRUE,,,,,,,,,,,,,,,,,,,,

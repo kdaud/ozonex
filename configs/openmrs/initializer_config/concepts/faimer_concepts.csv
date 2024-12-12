@@ -19,7 +19,7 @@ f95cfcf4-8d35-4595-a141-02a3f42cb3d6,,,Follow-up Appointment,Follow-up Appointme
 e62d1a6a-9292-4ae3-b6da-df23a5e0b722,,,C-reactive protein,CRP,,,,,Test,Numeric,,,,Yes,mg/dL,,,,,,
 b6cb8d8b-30e5-48de-afb6-4db00a585f8d,,,Specific gravity,Specific gravity,,,,,Test,Numeric,,,,Yes,,,,,,,
 4da41739-8b6e-4187-9212-9c4e9fd3e1a2,,,Color,Color,,,,,Test,Text,,,,,,,,,,,
-2fffd2d7-2211-4d69-ba0f-9a891e7d22e3,,,Ketones,Ketones,,,,,Test,Coded,,,, ,,,,,,,
+2fffd2d7-2211-4d69-ba0f-9a891e7d22e3,,,Ketones,Ketones,,,,,Test,Coded,,,,,,,,,,,
 7ef63efb-46e8-c39b-2e28-4987debb63cf,,,Leukocyte Esterase,Leukocyte Esterase,,,,,Test,Coded,,,,,,,,,,,
 fb7ef63e-2e28-486e-bc39-634987debbcf,,,Protein,Protein,,,,,Test,Coded,,,,,,,,,,,
 58a3ef6b-d51c-4f24-bb9f-0ec5ae5e05e2,,,Nitrites,Nitrites,,,,,Test,Coded,,,,,,,,,,,
