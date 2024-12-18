@@ -18,6 +18,7 @@
 
         <samplepatients.version>1.3.0-SNAPSHOT</samplepatients.version>
         <datafilter.version>2.2.0</datafilter.version>
+        <keycloakThemeFaimer.version>1.0.0-SNAPSHOT</keycloakThemeFaimer.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,13 @@
             <artifactId>datafilter-omod</artifactId>
             <version>${datafilter.version}</version>
             <type>jar</type>
+        </dependency>
+        <!--  Keycloak FAIMER theme -->
+        <dependency>
+            <groupId>com.ozonehis</groupId>
+            <artifactId>keycloak-theme-faimer</artifactId>
+            <version>${keycloakThemeFaimer.version}</version>
+            <type>zip</type>
         </dependency>
     </dependencies>
 
@@ -63,20 +71,15 @@
                         </goals>
                         <configuration>
                             <outputDirectory>
-                                ${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+                                ${project.build.directory}/${project.artifactId}-${project.version}
+                            </outputDirectory>
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
                                     <directory>${project.build.directory}/ozone</directory>
                                     <excludes>
                                         <exclude>distro/configs/**/ampathforms*/**</exclude>
-<!--                                        <exclude>distro/configs/**/concepts*/**</exclude>-->
-<!--                                        <exclude>distro/configs/**/drugs*/**</exclude>-->
-<!--                                        <exclude>distro/configs/**/encountertypes*/**</exclude>-->
-<!--                                        <exclude>distro/configs/**/globalproperties*/**</exclude>-->
                                         <exclude>distro/configs/**/locations*/**</exclude>
-<!--                                        <exclude>distro/configs/**/privileges*/**</exclude>-->
-<!--                                        <exclude>distro/configs/**/roles*/**</exclude>-->
                                     </excludes>
                                 </resource>
                             </resources>
@@ -115,6 +118,7 @@
                     <!-- Merge Ozone .env and faimer.env files -->
                     <execution>
                         <id>Merge env files</id>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>merge</goal>
                         </goals>
@@ -130,6 +134,24 @@
                                     <override>true</override>
                                 </merge>
                             </merges>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>Unpack and Copy FAIMER Keycloak theme</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <excludeTransitive>true</excludeTransitive>
+                            <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/keycloak/themes</outputDirectory>
+                            <includeArtifactIds>keycloak-theme-faimer</includeArtifactIds>
                         </configuration>
                     </execution>
                 </executions>

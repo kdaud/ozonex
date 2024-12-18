@@ -13,3 +13,7 @@ services:
       - KC_SMTP_AUTH=${KC_SMTP_AUTH}
       - KC_SMTP_REPLY_TO=${KC_SMTP_REPLY_TO}
       - KC_SMTP_REPLY_TO_DISPLAY_NAME=${KC_SMTP_REPLY_TO_DISPLAY_NAME}
+
+  keycloak:
+    volumes:
+      - ${DISTRO_PATH}/binaries/keycloak/themes:/opt/bitnami/keycloak/providers
