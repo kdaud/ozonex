@@ -1458,7 +1458,8 @@
     "envelopeFrom": "",
     "ssl": "${KC_SMTP_SSL}"
   },
-  "loginTheme": "carbon",
+  "loginTheme": "${KC_LOGIN_THEME}",
+  "emailTheme": "${KC_EMAIL_THEME}",
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
