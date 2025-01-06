@@ -2267,7 +2267,7 @@
       "email": "jdoe@example.com",
       "enabled": true,
       "totp": false,
-      "emailVerified": false,
+      "emailVerified": true,
       "credentials": [
         {
           "id": "958bbd6b-1182-4143-b8fd-9f9676728440",
