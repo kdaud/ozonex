@@ -20,7 +20,7 @@ services:
 
   keycloak:
     volumes:
-      - "${KEYCLOAK_BINARIES_PATH:-keycloak-binaries}/theme:/opt/bitnami/keycloak/providers"
+      - "${KEYCLOAK_BINARIES_PATH:-keycloak-binaries}/themes:/opt/bitnami/keycloak/providers"
 
 volumes:
   keycloak-binaries: ~
