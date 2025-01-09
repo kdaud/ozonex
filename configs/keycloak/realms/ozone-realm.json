@@ -96,6 +96,24 @@
           "clientRole": true,
           "containerId": "14b6083d-2d3c-4fb1-a75d-0f5af17be198",
           "attributes": {}
+        },
+        {
+          "id": "5bcb21c5-e776-406c-b88d-5e7a7b81e5e3",
+          "name": "FAIMER Internal",
+          "description": "Internal Role For Faimer Users",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "14b6083d-2d3c-4fb1-a75d-0f5af17be198",
+          "attributes": {}
+        },
+        {
+          "id": "8749b35d-8ba1-450a-8061-98636ef23a80",
+          "name": "Testing Internal",
+          "description": "Internal Role For Faimer Staff",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "14b6083d-2d3c-4fb1-a75d-0f5af17be198",
+          "attributes": {}
         }
       ],
       "realm-management": [
@@ -2297,7 +2315,9 @@
       ],
       "clientRoles": {
         "openmrs": [
-          "System Developer"
+          "System Developer",
+          "FAIMER Internal",
+          "Testing Internal"
         ]
       },
       "notBefore": 0,
