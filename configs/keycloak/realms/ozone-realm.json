@@ -785,6 +785,20 @@
             "claim.name": "roles",
             "jsonType.label": "String"
           }
+        },
+        {
+          "name": "provider",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "provider",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "provider",
+            "jsonType.label": "String"
+          }
         }
       ],
       "defaultClientScopes": [
