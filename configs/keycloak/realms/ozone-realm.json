@@ -691,7 +691,6 @@
         "oidc.ciba.grant.enabled": "false",
         "client.secret.creation.time": "1734376356",
         "backchannel.logout.session.required": "true",
-        "login_theme": "carbon",
         "post.logout.redirect.uris": "${OPENLMS_PUBLIC_URL}/auth/oidc/logout.php",
         "oauth2.device.authorization.grant.enabled": "false",
         "display.on.consent.screen": "false",
