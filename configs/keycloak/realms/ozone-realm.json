@@ -99,8 +99,8 @@
         },
         {
           "id": "5bcb21c5-e776-406c-b88d-5e7a7b81e5e3",
-          "name": "FAIMER Internal",
-          "description": "Internal Role For Faimer Users",
+          "name": "FAIMER Learner",
+          "description": "Role For FAIMER Learners",
           "composite": false,
           "clientRole": true,
           "containerId": "14b6083d-2d3c-4fb1-a75d-0f5af17be198",
@@ -2316,7 +2316,7 @@
       "clientRoles": {
         "openmrs": [
           "System Developer",
-          "FAIMER Internal",
+          "FAIMER Learner",
           "Testing Internal"
         ]
       },
