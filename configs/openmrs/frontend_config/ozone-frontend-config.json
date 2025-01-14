@@ -1,0 +1,17 @@
+{
+  "@openmrs/esm-home-app": {
+    "extensionSlots": {
+      "homepage-widgets-slot": {
+        "remove": ["home-appointments"]
+      }
+    }
+  },
+  "@openmrs/esm-primary-navigation-app": {
+    "externalRefLinks": [
+      {
+        "title": "OpenLMS",
+        "redirect": "${OPENLMS_PUBLIC_URL}"
+      }
+    ]
+  }
+}
