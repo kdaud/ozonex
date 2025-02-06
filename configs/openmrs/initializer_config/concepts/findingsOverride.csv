@@ -2,3 +2,4 @@ Uuid,Void/Retire,Same as mappings,Fully specified name:en,Fully specified name:f
 5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5090;PIH:5090;AMPATH:5090,Height (in),Taille (in),HT,,Patient's height in inches.,,Finding,Numeric,10,,,,,272,in,Yes,,,
 5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5089;PIH:5089;AMPATH:5089,Weight (lbs),Poids (lbs),WT,,Patient's weight in pounds.,,Finding,Numeric,0,,,,,250,lbs,Yes,,,
 5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:5088;PIH:5088;AMPATH:5088,Temperature (c),Température (c),Temp (c),,Patient's temperature in degrees centigrade.,,Finding,Numeric,25,,,,38,43,DEG C,Yes,,,
+80793c71-bd7e-4c36-b107-969bbde21091,,,Temperature (f),Température (f),Temp (f),,Patient's temperature in degrees fahrenheit.,,Finding,Numeric,77,,,,100.4,109.4,DEG F,Yes,,,

@@ -2,16 +2,23 @@
   "@openmrs/esm-home-app": {
     "extensionSlots": {
       "homepage-widgets-slot": {
-        "remove": ["home-appointments"]
+        "remove": [
+          "home-appointments"
+        ]
       }
     }
   },
   "@openmrs/esm-primary-navigation-app": {
     "externalRefLinks": [
       {
-        "title": "OpenLMS",
+        "title": "Open LMS",
         "redirect": "${OPENLMS_PUBLIC_URL}"
       }
     ]
+  },
+  "@openmrs/esm-patient-vitals-app": {
+    "concepts": {
+      "temperatureUuid": "80793c71-bd7e-4c36-b107-969bbde21091"
+    }
   }
 }
