@@ -111,34 +111,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.bekioui.maven.plugin</groupId>
-                <artifactId>merge-maven-plugin</artifactId>
-                <version>1.2.0</version>
-                <executions>
-                    <!-- Merge Ozone .env and faimer.env files -->
-                    <execution>
-                        <id>Merge env files</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>merge</goal>
-                        </goals>
-                        <configuration>
-                            <merges>
-                                <merge>
-                                    <target>
-                                        ${project.build.directory}/${project.artifactId}-${project.version}/run/docker/concatenated.env</target>
-                                    <sources>
-                                        <source>${project.build.directory}/${ozone.artifactId}/run/docker/.env</source>
-                                        <source>faimer.env</source>
-                                    </sources>
-                                    <override>true</override>
-                                </merge>
-                            </merges>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
