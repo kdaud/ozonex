@@ -23,5 +23,14 @@
   },
   "@openmrs/esm-patient-chart-app": {
     "restrictByVisitLocationTag": true
+  },
+  "@openmrs/esm-patient-orders-app": {
+    "showReferenceNumberField": false,
+    "orderTypes": [
+      {
+        "orderTypeUuid": "8d2aff07-55e6-4a4a-8878-72b9eb36a3b8",
+        "orderableConceptSets": ["f5b13d49-5ef3-4a33-afdf-6ef22a09d16f"]
+      }
+    ]
   }
 }

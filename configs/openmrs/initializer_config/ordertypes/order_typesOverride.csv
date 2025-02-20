@@ -1,0 +1,2 @@
+Uuid,Void/Retire,Name,display:en,Description,Java class name,Parent,Concept Classes
+8d2aff07-55e6-4a4a-8878-72b9eb36a3b8,,Imaging Order,Imaging Order, An order type for imaging orders,org.openmrs.Order,,Imaging
