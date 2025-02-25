@@ -5,5 +5,6 @@ edd99c3a-6005-4fa1-8a81-1ace0afd6e04,Delete Medication Dispense,Able to delete M
 ,View Appointment Services,Able to view Services in Appointments module,
 ,View Appointments,Able to view Appointments in Appointments module,
 ,View OrderTemplates,Able to view Order Templates,
+,Get Queue Entries,Able to get Queue Entries,
 30d2be09-68ab-49e1-a266-c3970f09f247,Faimer: Has Associated Patients,Privilege to control whether a user will have patients created for them,
 60a004e1-a945-44a3-a953-80d8ebdb9bbd,Faimer: See All Patients,Privilege to allow a user to see all patients,
