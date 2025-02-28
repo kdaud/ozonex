@@ -1,0 +1,13 @@
+services: 
+  nginx:
+    image: nginx:1.27.4
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.nginx.rule: "Host(`${O3_IFRAME_HOSTNAME}`)"
+      traefik.http.routers.nginx.entrypoints: "websecure"
+      traefik.http.services.nginx.loadbalancer.server.port: 80
+    volumes:
+      - ${O3_IFRAME_HTML_PATH}:/usr/share/nginx/html
+    networks:
+      - ozone
+      - web
