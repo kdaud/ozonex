@@ -11,3 +11,7 @@ services:
     networks:
       - ozone
       - web
+  env-substitution:
+    environment:
+      - SCHEME=${SCHEME}
+      - O3_HOSTNAME=${O3_HOSTNAME}
