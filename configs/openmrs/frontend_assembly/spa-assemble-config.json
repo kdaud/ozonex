@@ -1,0 +1,8 @@
+{
+  "frontendModules": {
+    "@openmrs/esm-ward-app": "next",
+    "@openmrs/esm-bed-management-app": "next"
+  },
+  "__comment": "FAIMER Overrides",
+  "frontendModuleExcludes": []
+}

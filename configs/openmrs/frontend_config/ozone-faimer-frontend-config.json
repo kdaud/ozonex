@@ -32,5 +32,14 @@
         "orderableConceptSets": ["f5b13d49-5ef3-4a33-afdf-6ef22a09d16f"]
       }
     ]
+  },
+  "@openmrs/esm-ward-app": {
+    "extensionSlots": {
+      "action-menu-ward-patient-items-slot": {
+        "add": [
+          "order-basket-action-menu"
+        ]
+      }
+    }
   }
 }

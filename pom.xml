@@ -19,6 +19,8 @@
         <samplepatients.version>1.3.0-SNAPSHOT</samplepatients.version>
         <datafilter.version>2.2.0</datafilter.version>
         <keycloakThemeFaimer.version>1.0.0-SNAPSHOT</keycloakThemeFaimer.version>
+        <bedmanagement.version>6.0.0</bedmanagement.version>
+        <emrapi.version>2.1.0</emrapi.version>
     </properties>
 
     <dependencies>
@@ -41,6 +43,18 @@
             <artifactId>keycloak-theme-faimer</artifactId>
             <version>${keycloakThemeFaimer.version}</version>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-omod</artifactId>
+            <version>${emrapi.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>bedmanagement-omod</artifactId>
+            <version>${bedmanagement.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

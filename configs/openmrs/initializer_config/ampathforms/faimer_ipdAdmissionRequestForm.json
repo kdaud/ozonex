@@ -1,0 +1,265 @@
+{
+    "name": "Ward Admission",
+    "pages": [
+      {
+        "label": "Ward Request",
+        "sections": [
+          {
+            "label": "Ward Details",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obsGroup",
+                "id": "inpatientDispositionConstruct",
+                "questionOptions": {
+                  "concept": "CIEL:169405",
+                  "rendering": "group"
+                },
+                "questions": [
+                  {
+                    "id": "disposition",
+                    "type": "obs",
+                    "required": true,
+                    "questionOptions": {
+                      "rendering": "radio",
+                      "required": true,
+                      "concept": "CIEL:169402",
+                      "answers": [
+                        {
+                          "concept": "CIEL:168619"
+                        }
+                      ]
+                    },
+                    "validators": []
+                  },
+                  {
+                    "id": "admitToLocation",
+                    "type": "obs",
+                    "required": true,
+                    "questionOptions": {
+                      "rendering": "ui-select-extended",
+                      "required": true,
+                      "concept": "CIEL:169403",
+                      "datasource": {
+                        "name": "location_datasource",
+                        "config": {
+                          "tag": "Admission Location"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Admission Orders",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "type": "obs",
+                "required": true,
+                "id": "bedAssignment",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "b4b46577-2a99-49a2-996d-fc3d8f4d5931",
+                  "answers": [
+                    {
+                      "concept": "9317db94-106c-4e71-b8aa-f09d237ce4d7"
+                    },
+                    {
+                      "concept": "5950d2c0-71e2-40e2-8fda-9c2f85c43921"
+                    },
+                    {
+                      "concept": "5ad99eb0-d740-4fcb-8a32-0272ae1694f7"
+                    },
+                    {
+                      "concept": "0ff61947-ffd5-41b2-8cb0-4bed55074a16"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "attendingPhysician",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "4863e01c-8be9-4bbb-b152-f2460467baf0"
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "admittingDiagnosis",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "18496348-6246-4826-b368-a324a583dae1"
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "codeStatus",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "4b29f87b-b7a2-4b2e-9e7b-41dc94ddd848",
+                  "answers": [
+                    {
+                      "concept": "3442b25e-4fc9-451c-b0e4-e8c9187ea7a0"
+                    },
+                    {
+                      "concept": "c1c1a16c-b965-4bad-b24a-7ccbfd4c81e1"
+                    },
+                    {
+                      "concept": "60c75860-a770-4d5d-b3cd-fa39ce15fe34"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "vitalSigns",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "447d00c1-e2ca-4ae6-96bc-ac656089a20b",
+                  "answers": [
+                    {
+                      "concept": "92e3eea9-307c-4cf1-974e-b43d0d04e839"
+                    },
+                    {
+                      "concept": "ee256029-e8f2-4193-af6b-e88053582887"
+                    },
+                    {
+                      "concept": "7ae363c5-7f96-48d1-8174-72d4421b232c"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "activity",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "373d170f-4b22-4071-8ac7-e106604f80f4",
+                  "answers": [
+                    {
+                      "concept": "49817c0d-8009-4ad9-a17c-85a16fd88528"
+                    },
+                    {
+                      "concept": "3103d44f-009c-4903-a1de-43bf496f81b5"
+                    },
+                    {
+                      "concept": "cb876cfe-cd5d-4598-bf0f-c6d2fe4263dc"
+                    },
+                    {
+                      "concept": "d2a7d898-b212-4b70-98a9-c5ecc699eca5"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": false,
+                "id": "nursingOrders",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "3c8cebe7-19eb-4e54-8eec-1bd2656b5a13",
+                  "answers": [
+                    {
+                      "concept": "3cc2a407-7260-48e8-8bb0-81811541be04"
+                    },
+                    {
+                      "concept": "ea41436a-b724-4560-9c51-cee03a63e85d"
+                    },
+                    {
+                      "concept": "fc82b844-c008-46d1-a77d-91de72de94ee"
+                    },
+                    {
+                      "concept": "6577af57-a3c6-4fff-938f-40fc06696d70"
+                    },
+                    {
+                      "concept": "d7d1cc3e-4b22-4b10-8a04-3f765aeafe23"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "diet",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "6c1babb0-8022-4bd4-ade4-562520de5297",
+                  "answers": [
+                    {
+                      "concept": "562d0e42-1312-473b-8501-56b3fb2ba16b"
+                    },
+                    {
+                      "concept": "597b2bc9-abd9-4f68-a8f2-658f2c1ed10a"
+                    },
+                    {
+                      "concept": "a2ddbc30-959a-4b83-9db7-20db2692560e"
+                    },
+                    {
+                      "concept": "b4ff548a-a984-4b92-9b2e-4227dd9f14de"
+                    },
+                    {
+                      "concept": "b69639a5-cfdc-4874-a58b-ea8b91570f76"
+                    },
+                    {
+                      "concept": "fa96524e-4063-4416-a116-e8d13f0f55d7"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": true,
+                "id": "medications",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "ffb8a077-3134-4de0-9f79-9f566f526d63",
+                  "answers": [
+                    {
+                      "concept": "9bf87552-c8bd-476c-a310-f00955250c54"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "type": "obs",
+                "required": false,
+                "id": "consults",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "807726f4-1641-42a4-8564-b0888eb33a8b"
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "processor": "EncounterFormProcessor",
+    "encounter": "Transfer Request",
+    "encounterType": "b2c4d5e6-7f8a-4e9b-8c1d-2e3f8e4a3b8f",
+    "referencedForms": [],
+    "uuid": "445d42c5-6886-4457-8d50-d84d41b34508",
+    "description": "Create an admission request to an inpatient ward",
+    "version": "1.0.0",
+    "published": true,
+    "retired": false
+  }
