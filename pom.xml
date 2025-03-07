@@ -93,7 +93,13 @@
                                 <resource>
                                     <directory>${project.build.directory}/ozone</directory>
                                     <excludes>
-                                        <exclude>distro/configs/**/ampathforms*/**</exclude>
+                                        <exclude>distro/configs/**/locations*/**</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/ampath_poc_adult_return_visit_form_v1.6_core-demo.json</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/covid19-core_demo.json</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/Mental Health Assessment Form.json</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/stuctured_soap_note.json</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/test-form-core_demo.json</exclude>
+                                        <exclude>distro/configs/**/ampathformstranslations*/**</exclude>
                                         <exclude>distro/configs/**/locations*/**</exclude>
                                     </excludes>
                                 </resource>
