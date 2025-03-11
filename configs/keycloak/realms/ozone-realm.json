@@ -716,7 +716,7 @@
         "saml.allow.ecp.flow": "false",
         "saml.server.signature.keyinfo.xmlSigKeyInfoKeyNameTransformer": "NONE",
         "saml.assertion.signature": "true",
-        "saml.encrypt": "true",
+        "saml.encrypt": "false",
         "saml_assertion_consumer_url_post": "${KC_SAML_OPENLMS_SP_ACS_URL}",
         "saml.server.signature": "true",
         "saml.artifact.binding.identifier": "ieN0Zm6ybjmL6x2HOVcQ9HTB2EQ=",
