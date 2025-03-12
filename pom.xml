@@ -22,6 +22,7 @@
         <keycloakThemeFaimer.version>1.0.0-SNAPSHOT</keycloakThemeFaimer.version>
         <bedmanagement.version>6.0.0</bedmanagement.version>
         <emrapi.version>2.1.0</emrapi.version>
+        <event.version>2.10.0</event.version>
     </properties>
 
     <dependencies>
@@ -49,6 +50,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>emrapi-omod</artifactId>
             <version>${emrapi.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs</groupId>
+            <artifactId>event-omod</artifactId>
+            <version>${event.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
