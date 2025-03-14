@@ -2,9 +2,7 @@
   "@openmrs/esm-home-app": {
     "extensionSlots": {
       "homepage-widgets-slot": {
-        "remove": [
-          "home-appointments"
-        ]
+        "remove": ["home-appointments"]
       }
     }
   },
@@ -29,9 +27,7 @@
     "orderTypes": [
       {
         "orderTypeUuid": "8d2aff07-55e6-4a4a-8878-72b9eb36a3b8",
-        "orderableConceptSets": [
-          "f5b13d49-5ef3-4a33-afdf-6ef22a09d16f"
-        ]
+        "orderableConceptSets": ["f5b13d49-5ef3-4a33-afdf-6ef22a09d16f"]
       }
     ]
   },
@@ -46,10 +42,13 @@
   "@openmrs/esm-ward-app": {
     "extensionSlots": {
       "action-menu-ward-patient-items-slot": {
-        "add": [
-          "order-basket-action-menu"
-        ]
+        "add": ["order-basket-action-menu"]
       }
+    }
+  },
+  "@openmrs/esm-styleguide": {
+    "preferredDateLocale": {
+      "en": "en-US"
     }
   }
 }

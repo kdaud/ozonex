@@ -1,8 +1,11 @@
 {
+  "coreVersion": "6.2.1-pre.2762",
   "frontendModules": {
-    "@openmrs/esm-ward-app": "next",
-    "@openmrs/esm-bed-management-app": "next"
+    "@openmrs/esm-bed-management-app": "next",
+    "@openmrs/esm-patient-notes-app": "9.2.3-pre.7000",
+    "@openmrs/esm-patient-chart-app": "9.2.3-pre.7000",
+    "@openmrs/esm-ward-app": "next"
   },
-  "__comment": "FAIMER Overrides",
-  "frontendModuleExcludes": []
+  "excludedFrontendModules": [],
+  "__comment": "FAIMER Overrides"
 }
