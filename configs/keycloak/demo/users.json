@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "4b6f84da-040d-45ef-b68a-25c40f91f7e8",
+      "username": "jdoe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "jdoe@example.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "attributes": {
+        "provider": "true",
+        "cohort": "2025",
+        "ehr": "ehr-1"
+      },
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "default-roles-ozone"
+      ],
+      "clientRoles": {
+        "openmrs": [
+          "System Developer",
+          "FAIMER Learner",
+          "Testing Internal"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    }
+  ]
+}
