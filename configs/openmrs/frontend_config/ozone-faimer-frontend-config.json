@@ -3,6 +3,11 @@
     "extensionSlots": {
       "homepage-widgets-slot": {
         "remove": ["home-appointments"]
+      },
+      "homepage-dashboard-slot": {
+        "remove": [
+          "clinical-appointments-dashboard-link"
+        ]
       }
     }
   },
@@ -20,7 +25,14 @@
     }
   },
   "@openmrs/esm-patient-chart-app": {
-    "restrictByVisitLocationTag": true
+    "restrictByVisitLocationTag": true,
+    "extensionSlots": {
+      "patient-chart-dashboard-slot": {
+        "remove": [
+          "patient-appointments-summary-dashboard"
+        ]
+      }
+    }
   },
   "@openmrs/esm-patient-orders-app": {
     "showReferenceNumberField": false,
