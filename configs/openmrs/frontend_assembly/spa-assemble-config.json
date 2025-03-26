@@ -15,8 +15,8 @@
     "@openmrs/esm-patient-notes-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-chart-app": "9.2.3-pre.7000",
     "@openmrs/esm-appointments-app":"8.3.1",
-    "@openmrs/esm-ward-app": "next",
-    "@openmrs/esm-bed-management-app": "next"
+    "@openmrs/esm-ward-app": "8.3.2-pre.5055",
+    "@openmrs/esm-bed-management-app": "8.3.2-pre.5055"
   },
   "excludedFrontendModules": [
     "@openmrs/esm-appointments-app"
