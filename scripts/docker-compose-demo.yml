@@ -1,11 +1,12 @@
 services:
   demo-data:
-    image: mekomsolutions/ozone-demo-data:1.0.0
+    image: mekomsolutions/ozone-demo-data:1.1.0-SNAPSHOT
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - OPENMRS_SERVER_URL=http://openmrs:8080/openmrs
       - OPENMRS_USERNAME=${OPENMRS_USER}
       - OPENMRS_PASSWORD=${OPENMRS_PASSWORD}
+      - OPENMRS_DEMO_PATIENTS=${NUMBER_OF_DEMO_PATIENTS}
       - OPENMRS_OAUTH_ENABLED=${ENABLE_SSO}
       - OPENMRS_OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID}
       - OPENMRS_OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET}
