@@ -12,6 +12,7 @@ services:
       - ozone
       - web
   env-substitution:
+    image: mekomsolutions/env-substitution:0df956a
     environment:
       - SCHEME=${SCHEME}
       - O3_HOSTNAME=${O3_HOSTNAME}
