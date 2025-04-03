@@ -12,6 +12,13 @@
     }
   },
   "@openmrs/esm-primary-navigation-app": {
+    "extensionSlots": {
+      "user-panel-slot": {
+        "remove": [
+          "password-changer"
+        ]
+      }
+    },
     "externalRefLinks": [
       {
         "title": "Open LMS",
