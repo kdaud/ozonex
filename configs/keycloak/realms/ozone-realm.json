@@ -1756,7 +1756,7 @@
     "referrerPolicy": "no-referrer",
     "xRobotsTag": "none",
     "xFrameOptions": "SAMEORIGIN",
-    "contentSecurityPolicy": "frame-ancestors 'self' *.${O3_HOSTNAME};",
+    "contentSecurityPolicy": "${KEYCLOAK_CONTENT_SECURITY_POLICY}",
     "xXSSProtection": "1; mode=block",
     "strictTransportSecurity": "max-age=31536000; includeSubDomains"
   },
