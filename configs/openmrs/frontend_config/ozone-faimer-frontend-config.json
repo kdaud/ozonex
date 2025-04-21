@@ -85,5 +85,12 @@
     "preferredDateLocale": {
       "en": "en-US"
     }
+  },
+  "@openmrs/esm-system-admin-app": {
+    "Display conditions": {
+      "privileges": [
+        "System Developer"
+      ]
+    }
   }
 }
