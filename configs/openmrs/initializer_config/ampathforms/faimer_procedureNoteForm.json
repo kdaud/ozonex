@@ -43,7 +43,7 @@
               "required": false,
               "id": "procedureNoteDate",
               "questionOptions": {
-                "rendering": "date",
+                "rendering": "datetime",
                 "concept": "0934658e-fee3-44e3-a8f2-292dc3587f54",
                 "weeksList": ""
               }
