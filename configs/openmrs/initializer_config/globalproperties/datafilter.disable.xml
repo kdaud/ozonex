@@ -60,5 +60,9 @@
             <property>datafilter_locationBasedPatientFullTextFilter.disabled</property>
             <value>true</value>
         </globalProperty>
+        <globalProperty>
+            <property>datafilter_locationBasedProviderFilter.disabled</property>
+            <value>true</value>
+        </globalProperty>
     </globalProperties>
 </config>
