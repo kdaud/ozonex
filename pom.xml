@@ -25,6 +25,19 @@
         <event.version>2.10.0</event.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <name>Mekom Solutions Nexus private repo for releases</name>
+            <id>mks-nexus-private</id>
+            <url>https://nexus.mekomsolutions.net/repository/maven-private-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <name>Mekom Solutions Nexus private repo for snapshots</name>
+            <id>mks-nexus-private-snapshots</id>
+            <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <!--  OpenMRS modules -->
         <dependency>
