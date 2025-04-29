@@ -1,6 +1,7 @@
 {
   "coreVersion": "6.2.1-pre.2762",
   "frontendModules": {
+    "@mekomsolutions/esm-patient-tests-app": "9.2.3-pre.1000",
     "@openmrs/esm-patient-forms-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-allergies-app": "9.2.3-pre.7000",
     "@openmrs/esm-generic-patient-widgets-app": "9.2.3-pre.7000",
@@ -11,7 +12,6 @@
     "@openmrs/esm-patient-orders-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-medications-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-vitals-app": "9.2.3-pre.7000",
-    "@openmrs/esm-patient-tests-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-notes-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-chart-app": "9.2.3-pre.7000",
     "@openmrs/esm-patient-search-app": "8.3.2-pre.5101",
@@ -20,7 +20,8 @@
     "@openmrs/esm-bed-management-app": "8.3.2-pre.5055"
   },
   "excludedFrontendModules": [
-    "@openmrs/esm-appointments-app"
+    "@openmrs/esm-appointments-app",
+    "@openmrs/esm-patient-tests-app"
   ],
   "__comment": "FAIMER Overrides"
 }

@@ -50,7 +50,7 @@
       }
     ]
   },
-  "@openmrs/esm-patient-tests-app": {
+  "@mekomsolutions/esm-patient-tests-app": {
     "resultsViewerConcepts": [
       {
         "conceptUuid": "3d4841e7-17d1-46b1-acd8-3c9d8965469c",
