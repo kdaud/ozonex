@@ -112,6 +112,7 @@
                                         <exclude>distro/configs/**/ampathforms*/Mental Health Assessment Form.json</exclude>
                                         <exclude>distro/configs/**/ampathforms*/stuctured_soap_note.json</exclude>
                                         <exclude>distro/configs/**/ampathforms*/test-form-core_demo.json</exclude>
+                                        <exclude>distro/configs/**/ampathforms*/surgery-core_demo.json</exclude>
                                         <exclude>distro/configs/**/ampathformstranslations*/**</exclude>
                                         <exclude>distro/configs/**/locations*/**</exclude>
 
