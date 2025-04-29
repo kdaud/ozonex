@@ -136,10 +136,10 @@
               }
             },
             {
-              "label": "Complecations",
+              "label": "Complications",
               "type": "obs",
               "required": false,
-              "id": "procedureNoteComplecations",
+              "id": "procedureNoteComplications",
               "questionOptions": {
                 "rendering": "textarea",
                 "concept": "64fe56e6-5b52-4cdb-adc2-b6d50bfdee63",
