@@ -40,12 +40,12 @@
 
     <dependencies>
         <!--  OpenMRS modules -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>samplepatients-omod</artifactId>
             <version>${samplepatients.version}</version>
             <type>jar</type>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>datafilter-omod</artifactId>
@@ -77,12 +77,12 @@
             <version>${bedmanagement.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>com.ozonehis</groupId>
             <artifactId>ozone-pro</artifactId>
             <type>zip</type>
             <version>1.0.0-alpha.14</version>
-        </dependency>
+        </dependency> -->
     </dependencies>
 
     <repositories>
